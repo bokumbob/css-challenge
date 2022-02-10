@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            width: 500px;
+            height: 500px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+            background-color: salmon;
+        }
+
+        .center {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 38%;
+            left: 38%;
+        }
+
+        .center div {
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+            animation: c 2s ease-in-out infinite alternate;
+        }
+
+        .b {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: scale(0);
+            width: 60px;
+            height: 60px;
+            box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+            animation: b 2s ease-in-out infinite alternate;
+        }
+
+        .c {
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            transform: scale(0);
+            width: 30px;
+            height: 30px;
+            box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+            animation: a 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes a {
+
+            0%,
+            70% {
+                box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+                transform: scale(0);
+            }
+
+            100% {
+                box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes b {
+
+            0%,
+            40% {
+                box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+                transform: scale(0);
+            }
+
+            100% {
+                box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes c {
+
+            0%,
+            10% {
+                box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+                transform: scale(0);
+            }
+
+            100% {
+                box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="center">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+    </div>
+</body>
+
+</html>
